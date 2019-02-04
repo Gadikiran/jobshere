@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>look.imp</groupId>
-  <artifactId>freshersworldback</artifactId>
+  <artifactId>p2freshersworld</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>freshersworldback</name>
+  <name>p2freshersworld</name>
   <url>http://maven.apache.org</url>
 
   <properties>

@@ -1,4 +1,4 @@
-package look.imp.freshersworldback;
+package look.imp.p2freshersworld;
 
 /**
  * Hello world!

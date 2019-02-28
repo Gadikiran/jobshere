@@ -30,7 +30,6 @@ private UserDao userDao;
 //if there is an exception while inserting job details  - T is ErrorClazz object
 //client has to add the data in the body of the Http Request
 //handler method has to read the data from the body of the request
-	
 @RequestMapping(value="/addjob",method=RequestMethod.POST)
 public  ResponseEntity<?>  addJob(@RequestBody Job job,HttpSession session){
 	//Check for authentication (user has logged in or not)

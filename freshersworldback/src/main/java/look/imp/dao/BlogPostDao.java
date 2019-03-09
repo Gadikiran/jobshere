@@ -7,4 +7,7 @@ public interface BlogPostDao {
 void addBlogPost(BlogPost blogPost);
 List<BlogPost> getBlogsApproved();
 List<BlogPost> getBlogsWaitingForApproval();
+void rejectBlogPost(BlogPost blogPost);
+void approveBlogPost(BlogPost blogPost);
+BlogPost getBlog(int blogPostId);
 }

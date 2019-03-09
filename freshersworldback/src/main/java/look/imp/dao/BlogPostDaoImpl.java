@@ -1,3 +1,4 @@
+
 package look.imp.dao;
 
 import java.util.List;
@@ -32,5 +33,20 @@ private SessionFactory sessionFactory;
 		List<BlogPost> blogsWaitingForApproval=query.list();
 		return blogsWaitingForApproval;
 	}
+	public BlogPost getBlog(int blogPostId) {
+		Session session=sessionFactory.getCurrentSession();
+		BlogPost blogPost=(BlogPost)session.get(BlogPost.class, blogPostId);
+		return blogPost;
+	}
+	public void approveBlogPost(BlogPost blogPost) {
+		Session session=sessionFactory.getCurrentSession();
+		session.update(blogPost);
+	}
+	public void rejectBlogPost(BlogPost blogPost) {
+		Session session=sessionFactory.getCurrentSession();
+		session.delete(blogPost);
+	}
 
 }
+
+

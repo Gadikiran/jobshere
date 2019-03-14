@@ -17,7 +17,8 @@
 			{{blogPost.likes}}<br>
 			<textarea rows="4" cols="70" ng-model="commentTxt"></textarea> 
 			<button ng-click="addBlogComment(commentTxt,blogPost)" class="btn btn-primary">POST COMMENT</button>
-			{{blogComment}}<br>
+			{{blogComment.commentTxt}} &nbsp;, {{blogComment.commentedBy.firstname}},{{blogComment.commentedBy.lastname}}, 
+			    &nbsp; {{blogComment.commentedOn | date:'dd-MMMM-yyyy :hh:mm:ss' }}<br>
 			<a ng-click="getAllBlogComments(blogPost.blogPostId)">show comments</a><br>
 			<ul ng-repeat="blogComment in blogComments">
 			 <li>

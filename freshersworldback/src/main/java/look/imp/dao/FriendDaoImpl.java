@@ -21,8 +21,8 @@ private SessionFactory sessionFactory;
 	public List<User> getAllSuggestedUsers(String email) {
 		Session session=sessionFactory.getCurrentSession();
 		
-		String queryString="select * from user_s190224 where email in "  //S
-				+ "(select email from user_s190224 where email!=:e1 "  //A
+		String queryString="select * from userjobs where email in "  //S
+				+ "(select email from userjobs where email!=:e1 "  //A
 				+ "    minus "
 				+ "  (select toId_email from friend_s190224 where fromId_email=:e2 "  //B
 				+ "       union "

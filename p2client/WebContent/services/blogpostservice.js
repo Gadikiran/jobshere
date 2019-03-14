@@ -3,7 +3,7 @@
  */
 app.factory('BlogPostService',function($http){
 	var blogPostService={}
-	var BASE_URL ="http://localhost:8081/p2middleware"
+	var BASE_URL ="http://localhost:8082/p2middleware"
 	
 	//service(blogPost)   <- controller (blogPost)  <- view (user)
 	blogPostService.addBlogPost=function(blogPost){//from frontend controller,get blogpost from controller

@@ -43,7 +43,7 @@ private UserDao userDao;
 		blogCommentDao.addBlogComment(blogComment);
 		return new ResponseEntity<BlogComment>(blogComment,HttpStatus.OK);
 	}
-    @RequestMapping(value="/getblogcomments",method=RequestMethod.GET)
+    @RequestMapping(value="/getblogcomments/{blogPostId}",method=RequestMethod.GET)
     public ResponseEntity<?> getAllBlogComments(HttpSession session,@PathVariable int blogPostId){
     	//Check for Authenticated- only logged user can post a blog 
     			String email=(String)session.getAttribute("loginId");
